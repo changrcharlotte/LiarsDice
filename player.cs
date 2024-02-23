@@ -79,9 +79,9 @@ namespace dice_for_pirates_last
                 }
             }
 
-            Console.WriteLine("total number of " + compNumBid + "= " + numCount);
+            Console.WriteLine("total number of " + compFaceBid + "= " + numCount);
 
-            if (numCount < compNumBid)
+            if (numCount <= compNumBid)
             {
                 Console.WriteLine("the computer's bid was correct, so they win this round!");
                 return false;
@@ -92,11 +92,6 @@ namespace dice_for_pirates_last
 
                 Console.WriteLine("you are right, so you win this round!");
                 return true;
-            }
-            else
-            {
-                Console.WriteLine("testing failed");
-                return false;
             }
             
 
@@ -138,7 +133,7 @@ namespace dice_for_pirates_last
                 {
                     faceBid = userFaceBid + 1;
                     numBid = userNumBid;
-                    Console.WriteLine("the computer has bidded " + userNumBid + " of face:" + userNumBid);
+                    Console.WriteLine("the computer has bidded " + numBid + " of face:" + faceBid);
                 }
 
                 return false;
@@ -169,7 +164,7 @@ namespace dice_for_pirates_last
                 }
 
 
-                if (numCount < userNumBid)
+                if (numCount <= userNumBid)
                 {
                     Console.WriteLine("the computer's bid was correct, so they win this round!");
                     playRound = false;
